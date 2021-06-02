@@ -1,0 +1,293 @@
+:root {
+  --main-color: #323232;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  color: #323232;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #ff7e00;
+  transition: all .3s;
+
+  &:hover {
+    color: #827a72;
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+.container {
+  max-width: 1024px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.head {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+
+  &__img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    padding-left: 30px;
+  }
+
+  &__name {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  &__position {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+
+    img {
+      width: 25px;
+    }
+
+    span {
+      width: calc(100% - 25px);
+      padding-left: 10px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .head {
+    display: block;
+
+    &__img {
+      margin: 0 auto 10px;
+    }
+
+    &__info {
+      padding-left: 0;
+    }
+
+    &__name {
+      font-size: 36px;
+    }
+
+    &__position {
+      font-size: 20px;
+    }
+
+    &__row {
+      
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.title-row {
+  padding: 10px 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  position: relative;
+  margin-bottom: 20px;
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100vw;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(255,126,0,1) 0%, rgba(137,68,1,1) 100%);
+  }
+}
+
+.objective {
+  padding-bottom: 20px;
+
+  p {
+    font-style: italic;
+    font-size: 18px;
+  }
+}
+
+.sklils {
+  padding-bottom: 20px;
+
+  ul {
+
+    li {
+      padding-left: 20px;
+      position: relative;
+      font-size: 18px;
+      margin-bottom: 5px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 3px;
+        background-color: #ff7e00;
+        left: 0;
+        top: 10px;
+      }
+
+      b {
+        color: #000;
+      }
+    }
+  }
+}
+
+.experience {
+  padding-bottom: 20px;
+
+  &__wrap {
+    position: relative;
+    padding-left: 40px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 5px;
+      bottom: 50px;
+      width: 1px;
+      background-color: #ff7e00;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-left: 1px solid #ff7e00;
+      border-top: 1px solid #ff7e00;
+      transform: rotate(45deg);
+      bottom: 38px;
+      left: -5px;
+    }
+  }
+
+  &__item {
+    padding-bottom: 40px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #ff7e00;
+      left: -45px;
+      top: 5px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+
+    img {
+      width: 20px;
+    }
+
+    span {
+      width: calc(100% - 20px);
+      padding-left: 10px;
+      font-weight: 700;
+    }
+  }
+  
+  &__descr {
+    margin-top: 20px;
+    font-size: 18px;
+    font-style: italic;
+    color: #000;
+  }
+}
+
+.education {
+  padding-bottom: 20px;
+
+  &__university {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  &__department {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+
+  &__category {
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+}
+
+.additional {
+  padding-bottom: 20px;
+
+  &__row {
+    margin-bottom: 5px;
+    font-size: 18px;
+
+    b {
+      color: #000;
+    }
+  }
+}
